@@ -5,8 +5,8 @@
  const Article= require('./models/article')
  const { createIndexes } = require('./models/article')
  const app = express( )
-
- mongoose.connect('mongodb://localhost/blog',{useNewUrlParser:true})
+const connectionString='mongodb+srv://haider:Zainawan786.@cluster0.9wlb1.mongodb.net/?retryWrites=true&w=majority'
+ mongoose.connect(connectionString,{useNewUrlParser:true})
 
  app.set('view engine','ejs')
  app.use(express.urlencoded({extended:false}))
